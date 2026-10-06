@@ -1,0 +1,42 @@
+/* ============================================================
+   CineMatch — Responsive Design
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .details-layout { flex-direction: column; }
+  .details-layout img { width: 200px; }
+}
+
+/* Small tablet / large phone */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: 1fr; }
+
+  #burger { display: block; }
+  #navLinks {
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(8, 8, 8, 0.97);
+    padding: 20px;
+    gap: 16px;
+    display: none;
+  }
+  body.light #navLinks { background: rgba(255, 255, 255, 0.97); }
+  #navLinks.open { display: flex; }
+
+  .hero h1 { font-size: 36px; }
+  .details-info h1 { font-size: 30px; }
+  .info-grid { grid-template-columns: 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card-body .desc { display: none; }
+  .hero-buttons .btn { width: 100%; text-align: center; }
+  .details-layout img { width: 150px; }
+}

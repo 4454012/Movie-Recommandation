@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch — Discover Your Next Favorite Movie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <h2>CINE<span>MATCH</span></h2>
+    <div class="ring"></div>
+    <p>Loading your cinematic universe...</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Cine<span>Match</span></a>
+      <button id="burger" aria-label="Menu">☰</button>
+      <div id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="watchlist.html">Watchlist</a>
+      </div>
+      <div class="nav-icons">
+        <a href="discover.html" aria-label="Search">🔍</a>
+        <button id="themeToggle" aria-label="Theme">☀️</button>
+        <a href="watchlist.html" aria-label="Profile">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div id="particles"></div>
+    <div class="container hero-content">
+      <span class="badge fade-in">✨ Personalized Movie Discovery</span>
+      <h1 class="slide-up">Find Your Next Favorite Movie</h1>
+      <p class="slide-up delay-1">Discover movies based on your mood, genre and taste.</p>
+      <div class="hero-buttons slide-up delay-2">
+        <a href="discover.html" class="btn">Explore Movies</a>
+        <a href="recommendations.html" class="btn btn-outline">Get Recommendations</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trending -->
+  <section class="container">
+    <h2 class="section-title">🔥 Trending Now</h2>
+    <div class="grid" id="trendingGrid"></div>
+  </section>
+
+  <!-- Genres -->
+  <section class="container">
+    <h2 class="section-title">Explore by Genre</h2>
+    <div class="genre-row" id="genreRow"></div>
+  </section>
+
+  <!-- Why -->
+  <section class="container">
+    <h2 class="section-title">Why CineMatch?</h2>
+    <div class="features">
+      <div class="feature-card"><div class="icon">🎯</div><h3>Personalized</h3><p>Get recommendations based on your preferences.</p></div>
+      <div class="feature-card"><div class="icon">🔎</div><h3>Smart Discovery</h3><p>Find movies based on genre, mood and ratings.</p></div>
+      <div class="feature-card"><div class="icon">❤️</div><h3>Watchlist</h3><p>Save movies you want to watch later.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">Cine<span>Match</span></div>
+        <p>Discover. Watch. Repeat.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <p><a href="index.html">Home</a> • <a href="discover.html">Discover</a> • <a href="recommendations.html">Recommendations</a> • <a href="watchlist.html">Watchlist</a></p>
+      </div>
+      <div class="social">
+        <h4>Follow</h4>
+        <a href="#" aria-label="GitHub">🐙</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+        <a href="#" aria-label="Instagram">📸</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 CineMatch. College Project.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <div id="toast"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Trending: top 8 by rating
+    var trending = MOVIES.slice().sort(function (a, b) { return b.rating - a.rating; }).slice(0, 8);
+    var grid = document.getElementById('trendingGrid');
+    trending.forEach(function (m) { grid.appendChild(createMovieCard(m)); });
+    observeReveals();
+
+    // Genre cards
+    var genres = [['🎬', 'Action'], ['😂', 'Comedy'], ['❤️', 'Romance'], ['👻', 'Horror'], ['🚀', 'Sci-Fi'], ['🕵️', 'Thriller'], ['🎭', 'Drama'], ['🧙', 'Fantasy']];
+    var row = document.getElementById('genreRow');
+    genres.forEach(function (g) {
+      var a = document.createElement('a');
+      a.className = 'genre-card';
+      a.href = 'discover.html?genre=' + encodeURIComponent(g[1]);
+      a.innerHTML = g[0] + ' ' + g[1];
+      row.appendChild(a);
+    });
+  </script>
+</body>
+</html>

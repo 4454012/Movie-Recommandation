@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Watchlist — CineMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="loader"><h2>CINE<span>MATCH</span></h2><div class="ring"></div><p>Loading your cinematic universe...</p></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Cine<span>Match</span></a>
+      <button id="burger" aria-label="Menu">☰</button>
+      <div id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="watchlist.html" class="active">Watchlist</a>
+      </div>
+      <div class="nav-icons">
+        <button id="themeToggle" aria-label="Theme">☀️</button>
+        <a href="watchlist.html" aria-label="Profile">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container page-head">
+    <h1>My Watchlist</h1>
+    <p>Movies you've saved to watch later.</p>
+    <div class="grid" id="watchlistGrid" style="margin-top:24px"></div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><div class="logo">Cine<span>Match</span></div><p>Discover. Watch. Repeat.</p></div>
+      <div><h4>Links</h4><p><a href="index.html">Home</a> • <a href="discover.html">Discover</a> • <a href="recommendations.html">Recommendations</a> • <a href="watchlist.html">Watchlist</a></p></div>
+      <div class="social"><h4>Follow</h4><a href="#">🐙</a><a href="#">💼</a><a href="#">📸</a></div>
+    </div>
+    <p class="copyright">© 2026 CineMatch. College Project.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <div id="toast"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/watchlist.js"></script>
+</body>
+</html>

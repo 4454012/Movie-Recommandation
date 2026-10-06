@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Movies — CineMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="loader"><h2>CINE<span>MATCH</span></h2><div class="ring"></div><p>Loading your cinematic universe...</p></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Cine<span>Match</span></a>
+      <button id="burger" aria-label="Menu">☰</button>
+      <div id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="discover.html" class="active">Discover</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="watchlist.html">Watchlist</a>
+      </div>
+      <div class="nav-icons">
+        <button id="themeToggle" aria-label="Theme">☀️</button>
+        <a href="watchlist.html" aria-label="Profile">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container page-head">
+    <h1>Discover Movies</h1>
+    <p>Explore movies that match your taste.</p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search movies..." aria-label="Search movies">
+      <span style="font-size:24px;align-self:center">🔍</span>
+    </div>
+
+    <div class="filters">
+      <select id="genreFilter" aria-label="Genre">
+        <option>All</option><option>Action</option><option>Comedy</option><option>Romance</option>
+        <option>Horror</option><option>Sci-Fi</option><option>Thriller</option><option>Drama</option><option>Fantasy</option>
+      </select>
+      <select id="ratingFilter" aria-label="Rating">
+        <option>All</option><option>8+</option><option>7+</option><option>6+</option>
+      </select>
+      <select id="yearFilter" aria-label="Year">
+        <option>All</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>Older</option>
+      </select>
+      <select id="sortFilter" aria-label="Sort by">
+        <option>Popular</option><option>Rating</option><option>Newest</option><option>A-Z</option>
+      </select>
+    </div>
+
+    <p id="resultCount" class="meta"></p>
+    <div class="grid" id="movieGrid" style="margin-top:18px"></div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><div class="logo">Cine<span>Match</span></div><p>Discover. Watch. Repeat.</p></div>
+      <div><h4>Links</h4><p><a href="index.html">Home</a> • <a href="discover.html">Discover</a> • <a href="recommendations.html">Recommendations</a> • <a href="watchlist.html">Watchlist</a></p></div>
+      <div class="social"><h4>Follow</h4><a href="#">🐙</a><a href="#">💼</a><a href="#">📸</a></div>
+    </div>
+    <p class="copyright">© 2026 CineMatch. College Project.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <div id="toast"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/discover.js"></script>
+</body>
+</html>

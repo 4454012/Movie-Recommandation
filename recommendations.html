@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendations — CineMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="loader"><h2>CINE<span>MATCH</span></h2><div class="ring"></div><p>Loading your cinematic universe...</p></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">Cine<span>Match</span></a>
+      <button id="burger" aria-label="Menu">☰</button>
+      <div id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="recommendations.html" class="active">Recommendations</a>
+        <a href="watchlist.html">Watchlist</a>
+      </div>
+      <div class="nav-icons">
+        <button id="themeToggle" aria-label="Theme">☀️</button>
+        <a href="watchlist.html" aria-label="Profile">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container page-head">
+    <h1>Find Your Perfect Movie</h1>
+    <p>Tell us what you're in the mood for.</p>
+
+    <h3 style="margin-top:30px">What type of movie do you want?</h3>
+    <div class="pill-group">
+      <button class="pill" data-genre="Action">Action</button>
+      <button class="pill" data-genre="Comedy">Comedy</button>
+      <button class="pill" data-genre="Romance">Romance</button>
+      <button class="pill" data-genre="Horror">Horror</button>
+      <button class="pill" data-genre="Sci-Fi">Sci-Fi</button>
+      <button class="pill" data-genre="Thriller">Thriller</button>
+      <button class="pill" data-genre="Drama">Drama</button>
+      <button class="pill" data-genre="Fantasy">Fantasy</button>
+    </div>
+
+    <h3>What's your mood?</h3>
+    <div class="pill-group">
+      <button class="pill" data-mood="Excited">🔥 Excited</button>
+      <button class="pill" data-mood="Happy">😂 Happy</button>
+      <button class="pill" data-mood="Romantic">❤️ Romantic</button>
+      <button class="pill" data-mood="Scared">😱 Scared</button>
+      <button class="pill" data-mood="Thoughtful">🧠 Thoughtful</button>
+      <button class="pill" data-mood="Relaxed">😌 Relaxed</button>
+      <button class="pill" data-mood="Motivated">💪 Motivated</button>
+    </div>
+
+    <h3>Minimum rating? <span id="ratingValue" class="meta">7.0 ⭐</span></h3>
+    <input type="range" id="ratingSlider" min="5" max="10" step="0.5" value="7">
+
+    <button class="btn" id="recommendBtn" style="margin:26px 0">✨ Recommend Movies</button>
+
+    <div id="recommendResults"></div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><div class="logo">Cine<span>Match</span></div><p>Discover. Watch. Repeat.</p></div>
+      <div><h4>Links</h4><p><a href="index.html">Home</a> • <a href="discover.html">Discover</a> • <a href="recommendations.html">Recommendations</a> • <a href="watchlist.html">Watchlist</a></p></div>
+      <div class="social"><h4>Follow</h4><a href="#">🐙</a><a href="#">💼</a><a href="#">📸</a></div>
+    </div>
+    <p class="copyright">© 2026 CineMatch. College Project.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  <div id="toast"></div>
+
+  <script src="js/movies.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/recommendations.js"></script>
+</body>
+</html>
